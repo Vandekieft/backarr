@@ -17,6 +17,7 @@ for section in sections_to_process:
     username = config[section]['username']
     password = config[section]['password']
     auth_method = config[section]['auth_method']
+    download_path = config[section]['download_path']
 
 # Authentication method: 'None', 'Basic', or 'Forms'
 #auth_method = "Basic"
@@ -46,7 +47,7 @@ elif auth_method == 'Forms':
         exit()
 
 # Get the backups
-response = session.get(backup_url)
+response =  session.get(backup_url)
 
 if response.status_code == 200:
     backups = response.json()
@@ -59,7 +60,7 @@ if response.status_code == 200:
     download_response = session.get(download_url, stream=True)
 
     if download_response.status_code == 200:
-        local_file_path = os.path.join("./", latest_backup['name'])
+        local_file_path = os.path.join(download_path, latest_backup['name'])
         with open(local_file_path, 'wb') as f:
             for chunk in download_response.iter_content(chunk_size=8192):
                 f.write(chunk)
