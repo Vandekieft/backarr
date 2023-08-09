@@ -14,7 +14,7 @@ Extendable: Designed to work with other apps that use the same API, making it ex
 ### Usage
 
 Configuration: Edit the config.ini file to include the details of the instances you want to manage. You can define different sections for each instance or app. 
-Example:
+INI Example:
 
     [radarr_instance1]
     host = https://radarr1.example.com
@@ -23,6 +23,11 @@ Example:
     password = password_for_instance1
     auth_method = Forms
     download_path = ./downloads
+
+Change the following line in backarr.py to reflect your ini
+
+    # List of sections to process
+    sections_to_process = ['radarr_instance1', 'radarr_instance2', 'sonarr_instance1']
 
 Running the Script: Execute the script to download the latest backups for the configured instances. The script will iterate through the sections defined in the configuration file, downloading and verifying the backups for each section.
 
