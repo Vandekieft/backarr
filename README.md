@@ -46,7 +46,7 @@ Requirements:
     Python 3.x
     requests library
 
-Notes:
+- Notes:
     - Make sure to set the appropriate permissions on the config.ini file to restrict access to sensitive information. The download_path variable in the INI file specifies the directory where the backups will be downloaded. Make sure the directory exists and has the appropriate permissions.
 
 Contributing
