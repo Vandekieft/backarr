@@ -21,8 +21,9 @@ Features
 Save the backarr.py and config.ini in the same directory
 - Configuration:
     - Edit the config.ini file to include the details of the instances you want to manage. You can define different sections for each instance or app. 
-INI Example:
 
+config Example:
+    
     [radarr_instance1]
     host = https://radarr1.example.com
     api_key = api_key_for_instance1
@@ -31,17 +32,16 @@ INI Example:
     auth_method = Forms
     download_path = ./downloads
 
-Change the following line in backarr.py to reflect your ini
+Change the following line in backarr.py to reflect your ini:
 
-    # List of sections to process
-    sections_to_process = ['radarr_instance1', 'radarr_instance2', 'sonarr_instance1']
+   ` sections_to_process = ['radarr_instance1', 'radarr_instance2', 'sonarr_instance1']`
 
 - Running the Script:
     - Execute the script to download the latest backups for the configured instances. The script will iterate through the sections defined in the configuration file, downloading and verifying the backups for each section.
 
 From the directorty you have files saved:
 
-    python backarr.py
+   ` python backarr.py`
 
 Requirements:
 
@@ -51,6 +51,5 @@ Requirements:
 - Notes:
     - Make sure to set the appropriate permissions on the config.ini file to restrict access to sensitive information. The download_path variable in the INI file specifies the directory where the backups will be downloaded. Make sure the directory exists and has the appropriate permissions.
 
-Contributing
 
 Feel free to open issues or submit pull requests.
