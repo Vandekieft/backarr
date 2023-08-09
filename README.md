@@ -18,6 +18,7 @@ Features
 
 ### Usage
 
+Save the backarr.py and config.ini in the same directory
 - Configuration:
     - Edit the config.ini file to include the details of the instances you want to manage. You can define different sections for each instance or app. 
 INI Example:
@@ -38,6 +39,7 @@ Change the following line in backarr.py to reflect your ini
 - Running the Script:
     - Execute the script to download the latest backups for the configured instances. The script will iterate through the sections defined in the configuration file, downloading and verifying the backups for each section.
 
+From the directorty you have files saved:
 
     python backarr.py
 
